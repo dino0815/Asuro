@@ -14,7 +14,7 @@
   # Target file name (without extension).
   TARGET = main
   SRC  = $(TARGET).c 
-  SRC += asuro.c# Quellcode Datein
+#  SRC += asuro.c# Quellcode Datein
   SRC += uart.c# Quellcode Datein
 #  SRC += tlcd.c# Quellcode Datein
 #  SRC += adc.c # Quellcode Datein

@@ -20,8 +20,8 @@ void uart_init(void){
   UCSRC = 1<<URSEL | 1<<UCSZ1 | 1<<UCSZ0;	// No Parity | 1 Stop Bit | 8 Data Bit
   UCSRB = 1<<RXEN  | 1<<TXEN  | 1<<RXCIE; // | 1<<TXCIE;//enable RX, TX and interr.
 
-  uart_buffer[0] = 0;
-  uart_rBuffer[0] = 0;
+//  uart_buffer[0] = 0;
+//  uart_rBuffer[0] = 0;
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -47,7 +47,7 @@ void uart_putString(char *s){
 void uart_getString(char* erg, const unsigned char max){
     char count = 0;
     char c = uart_getByte();
-    while(c != 0x0D){ //Bis c = "Enter"
+    while( c != 0x0D ){ //Bis c = "Enter"
         if(c == 0x08 || c == 0x7F){ // Backspace
             if(count > 0){ //wenn min. ein Zeichen im Buffer
                 erg--;
