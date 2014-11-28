@@ -20,8 +20,7 @@ BAUD  = 9600     # Uart Baudrate
 FORMAT = ihex
 
 # Target file name (without extension).
-TARGET = test_linesensor_ultrasonic
-
+TARGET = remote_controll
 
 AVRDUDE = avrdude
 AVRDUDE_PROGRAMMER = arduino 
